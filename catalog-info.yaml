@@ -1,0 +1,25 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: student-30-student30
+  title: student30 (student-30)
+  description: DataPower Nano Gateway provisioned via Terraform and Ansible
+  annotations:
+    github.com/project-slug: aldobustios/student-30-student30
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: student-30-gateway
+  tags:
+    - gateway
+    - apic
+    - production
+  links:
+    - url: https://apic-lab-mgmt-api-manager-apic.apps.itz-jyz46m.infra01-lb.wdc07.techzone.ibm.com
+      title: API Connect Manager
+      icon: dashboard
+    - url: https://openshift-gitops-server-openshift-gitops.apps.itz-jyz46m.infra01-lb.wdc07.techzone.ibm.com
+      title: ArgoCD
+      icon: dashboard
+spec:
+  type: service
+  lifecycle: production
+  owner: user:student-30
